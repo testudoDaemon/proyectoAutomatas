@@ -34,7 +34,8 @@ public class Main {
 
     private static void ejecutarAnalisisLexico() {
         try {
-            analizadorLexico.leerArchivo("./codigofuente.txt");
+            analizadorLexico.inicializarMapas();
+            analizadorLexico.leerArchivo("../codigofuente.txt");
             JOptionPane.showMessageDialog(null, "Análisis léxico completado. Tabla de tokens generada.");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error durante el análisis léxico: " + e.getMessage());

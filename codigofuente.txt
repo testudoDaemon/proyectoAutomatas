@@ -3,6 +3,7 @@ programa uno@;
 variables
 entero a&,b&,suma&;
 real num%,c%,d%;
+entero carlos^,infiel~;
 cadena letra$,caracter$;
 logico valor#, log#;
 inicio
