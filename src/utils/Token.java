@@ -1,6 +1,6 @@
 package utils;
 
-public class Token {
+public class Token{
     private final String lexema;
     private final int numeroLinea;
     private int valorTablaTokens;

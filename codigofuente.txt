@@ -5,48 +5,5 @@ entero a&,b&,suma&;
 real num%,c%,d%;
 cadena letra$,caracter$;
 logico valor#, log#;
-inicio
-	/* codigo */
-	leer ( a&);
-	leer(b&);
-	si ( a& > b&) entonces
-	inicio
-		leer(suma&);
-		a& = (b& * ( suma& + 10)) - a&;
-		escribir(a&);
-		mientras ( b& > 20 ) hacer
-		inicio
-			si (b$ < 50 || suma& <= 30) entonces
-			inicio
-				b& =  suma& - 3 ;
-			fin
-			leer ( b&);
-			escribir(b&);
-		fin
-	fin
-	sino
-	inicio
-		leer (letra$ );
-		escribir (letra$);
-		leer (valor#);
-		mientras (valor# == true ) hacer
-		inicio
-			leer(valor#);
-			num% = ( 30.56 / c% ) + d% * 7.4;
-			escribir(num%);
-			repetir
-			inicio
-				escribir (num%);
-				leer (letra$);
-			fin
-			hasta (letra$ == "n");
-		fin
-
-	fin
-	escribir ( "fin");
-	d% = 56.8;
-	escribir( d%);
-	log# = false;
-	escribir(log#);
 fin
 /* fin del programa */

@@ -1,6 +1,5 @@
 package utils;
 
-
 public enum TokenType {
     // Palabras Reservadas
     PALABRAS_RESERVADAS_PROGRAMA(-1, -1),
