@@ -27,10 +27,12 @@ public class analizadorLexico {
     public static final ArrayList<Integer> valorTokens = new ArrayList<Integer>();
     public static final ArrayList<String> tokens = new ArrayList<>();
     public static final String tablaTokensSalida = "./TablaTokens.txt";
-    public static final String tablaTokensSalidaErrores = "./TablaErrores.txt";
+    //public static final String tablaTokensSalidaErrores = "./TablaErrores.txt"; comentado pq no se usa
 
     public static final HashMap<Integer, Integer> posTablaSalida = new HashMap<>();
 
+    // este metodo no lo esta usando ningun otro metodo, el importante que se debe ejecutar es
+    // incializarMapas(); lo hare estatico
     public analizadorLexico() {
         inicializarMapas();
         try {
@@ -42,7 +44,7 @@ public class analizadorLexico {
         }
     }
 
-    public void inicializarMapas() {
+    public static void inicializarMapas() {
         identificadores.put("[a-zA-Z]+[\\$]", -53);
         identificadores.put("[a-zA-Z]+[\\%]", -52);
         identificadores.put("[a-zA-Z]+[\\&]", -51);
@@ -137,6 +139,7 @@ public class analizadorLexico {
 
             // Clasificación del token
             int valorToken = getValorToken(token);
+            System.out.println("valor token " + valorToken);
             if (valorToken != 0) {
                 escribirEnArchivo(token, valorToken, numLinea);
             } else {
