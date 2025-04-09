@@ -1,0 +1,12 @@
+1        /*        Lexema no clasificado
+1        ejemplo        Lexema no clasificado
+1        */        Lexema no clasificado
+2        uno@;        Lexema no clasificado
+4        a&,b&,suma&;        Lexema no clasificado
+5        num%,c%,d%;        Lexema no clasificado
+6        letra$,caracter$;        Lexema no clasificado
+7        valor#,        Lexema no clasificado
+7        log#;        Lexema no clasificado
+9        /*        Lexema no clasificado
+9        del        Lexema no clasificado
+9        */        Lexema no clasificado
