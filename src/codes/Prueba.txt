@@ -1,0 +1,28 @@
+program pruebagral1?;
+var
+int : i&;
+bool : condicion$;
+
+begin
+
+i& := 1;
+condicion$ := true;
+
+repeat
+    begin
+    write(i&);
+    write("\n");
+    if(i& == 300) then
+        begin
+        condicion$ := false;
+        write("Saliendo del repeat\n");
+        end
+    else
+        begin
+        write("i = ");
+        end
+    i& := i& + 1;
+    end
+until(condicion$ == true);
+
+end

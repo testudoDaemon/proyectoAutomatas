@@ -1,0 +1,72 @@
+program Primo?;
+var
+
+real: x%, raiz%, suposicion%, abs_suposicion%, i%;
+bool: siRaiz$, primo$;
+string: siPrimo#, noPrimo#;
+
+begin
+
+write("Escribe el numero a verificar si es primo o no: \n");
+read(x%);
+
+//calcular la raiz cuadrada de x%, el resultado es suposicion%
+if(x% < 0.0) then
+    begin
+    siRaiz$ := false;
+    end
+else
+    begin
+    if(x% == 0.0) then
+        begin   
+        raiz% := 0.0;
+        end
+    suposicion% := x% / 2.0;
+    abs_suposicion% := suposicion% * suposicion% - x%;
+    if(abs_suposicion% < 0.0) then
+        begin
+        abs_suposicion% := abs_suposicion% * -0.1;
+        end
+    while(abs_suposicion% > 0.00000001) do
+        begin
+        suposicion% := ( suposicion% + x% / suposicion% ) / 2.0;
+        end
+    end 
+
+//Aqui ya calculamos lo que seria si es primo o no
+//como servirian librerias y funciones
+
+if(x% <= 1.0) then
+    begin
+    primo$ := false;
+    end
+if(x% == 2.0) then
+    begin 
+    primo$ := true;
+    end
+while(i% <= suposicion%) do
+    begin
+    if(x% == 0.0) then
+        begin
+        primo$ := false;
+        end
+    else
+        begin
+        primo$ := true;
+        end
+    i% := i% + 1.0;
+    end
+
+siPrimo# := "Si es primo";
+noPrimo# := "No es primo";
+
+if(primo$ == true) then
+    begin
+    write(siPrimo#);
+    end
+else
+    begin
+    write(noPrimo#);
+    end
+
+end
