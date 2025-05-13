@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import lexico.ManejoArchivo;
 import utils.Token;
 import semantico.AnalizadorSemantico;
+import vci.VCIGen;
 
 public class Main {
 
@@ -16,6 +17,7 @@ public class Main {
         AnalizadorLexico analizadorLexico = new AnalizadorLexico();
         AnalizadorSemantico analizadorSemantico;
         ManejoArchivo mArch = new ManejoArchivo();
+        VCIGen vciGen = new VCIGen();
         ArrayList<Linea> lineas;
         ArrayList<Token> lexemas;
 
@@ -65,6 +67,8 @@ public class Main {
                         analizadorSemantico = new AnalizadorSemantico(tokens);
                         analizadorSemantico.analizar();
 
+                        vciGen = new VCIGen();
+                        vciGen.generarVCI(tokens);
 
                     }catch (Exception e){
                         System.out.println("Error durante el analisis" + e.getMessage());
