@@ -1,0 +1,17 @@
+centi%
+read
+faren%
+centi%
+9.0
+*
+5.0
+/
+32.0
++
+:=
+"Son: "
+write
+faren%
+write
+" grados fahrenheit"
+write

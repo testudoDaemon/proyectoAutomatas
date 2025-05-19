@@ -1,0 +1,43 @@
+program Pares?;
+var
+
+int: m&, n&, suma&, temp_m&, temp_n&;
+
+begin
+
+read(m&);
+read(n&);
+
+temp_m& := m&;
+temp_n& := n&;
+
+until (temp_m& == temp_n&) do 
+    begin
+        if(m& == n&) then 
+            begin
+            suma& := 0;
+            end
+        
+        if(m& > n&) then
+            begin
+            if(temp_n& % 2 == 0) then
+                begin
+                suma& := suma& + temp_n&;
+                end
+            temp_n& := temp_n& + 1;
+            end
+        if(n& > m&) then
+            begin
+            if(temp_m& % 2 == 0) then
+                begin
+                suma& := suma& + temp_m&;
+                end
+            temp_m& := temp_m& + 1;
+            end
+        end
+    end
+
+write("La suma de pares es: ");
+write(suma&);
+
+end
