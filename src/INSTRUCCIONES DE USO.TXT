@@ -1,4 +1,4 @@
-YA SE NOS HA DESCOMPUESTO 1 VEZ POR LAS DIRECCIONES,
-LA PROXIMA VEZ QUE USEMOS ESTO NOMAS HAY QUE COPIAR
-UN CÓDIGO DE FUENTE DESDE "CODES" Y CAMBIARLE EL NOMBRE
-A "codigofuente.txt", LUEGO EJECUTAR COMO SI NADA.
+1. Compilar con javac *.java
+2. Copiar un código fuente desde "./src/codes" hacia "./src" y cambiarle
+   el nombre a "codigofuente.txt"
+3. Ejecutar con Main.java
