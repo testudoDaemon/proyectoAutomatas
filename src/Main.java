@@ -32,9 +32,10 @@ public class Main {
                 //case 1 -> ejecutarAnalisisSintactico(); // Análisis Sintáctico
                 case 1 -> {
                     try{
+//                        System.out.println("directorio: " + System.getProperty("user.dir"));
                         // supongo que esta variable archivoTokens solo es para checar si ya existe
                         // tal archivo, no para escribir en este archivo si es que existe
-                        java.io.File archivoTokens = new java.io.File("../TablaTokens.txt");
+                        java.io.File archivoTokens = new java.io.File("./TablaTokens.txt");
                         if (archivoTokens.exists()) {
                             archivoTokens.delete(); // Elimina el archivo para iniciar desde cero
                         }
@@ -47,6 +48,12 @@ public class Main {
                         analizadorSemantico = new AnalizadorSemantico(tokens);
                         analizadorSemantico.analizar();
 
+                        // copy + paste del bloque de arriba que borra el archivo ya presente para evitar
+                        // duplicados con el append
+                        java.io.File archivoVCI = new java.io.File("./build/salida.vci");
+                        if (archivoVCI.exists()) {
+                            archivoVCI.delete(); // Elimina el archivo para iniciar desde cero
+                        }
                         vciGen = new VCIGen();
                         vciGen.generarVCI(tokens);
 
