@@ -1,16 +1,28 @@
-program Grados?;
+program pruebagral1?;
 var
-
-real: centi%, faren%;
+int : i&;
+bool : condicion$;
 
 begin
 
-read(centi%);
+i& := 1;
+condicion$ := true;
 
-faren% := centi% * 9.0 / 5.0 + 32.0;
-
-write("Son: ");
-write(faren%);
-write(" grados fahrenheit");
+repeat
+    begin
+    write(i&);
+    write("\n");
+    if(i& == 300) then
+        begin
+        condicion$ := false;
+        write("Saliendo del repeat\n");
+        end
+    else
+        begin
+        write("i = ");
+        end
+    i& := i& + 1;
+    end
+until(condicion$ == true);
 
 end

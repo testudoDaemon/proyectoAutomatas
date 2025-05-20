@@ -189,7 +189,7 @@ public class AnalizadorLexico {
 
 	private void generarArchivosSalida() throws IOException {
 		// Generar tabla de tokens
-		try (FileWriter writer = new FileWriter("TablaTokens.txt")) {
+		try (FileWriter writer = new FileWriter("src/build/TablaTokens.dat")) {
 			for (Token token : tablaTokens) {
 				writer.write(token.toString() + "\n");
 			}
